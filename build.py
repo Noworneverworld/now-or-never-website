@@ -12,20 +12,27 @@ def esc(v): return html.escape(str(v or ''),quote=True)
 def imgsrc(v):
     v=str(v or '')
     return '../..'+v if v.startswith('/') else '../../'+v.lstrip('./')
-def stop_media(stop):
+def stop_media(stop, index=0):
     imgs=[x for x in [stop.get('image'),stop.get('image_2'),stop.get('image_3')] if x]
     if not imgs:return ''
-    if len(imgs)==1:return f'<div class="stop-media one"><img src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}"></div>'
-    hs=[f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}">']
-    for x in imgs[1:3]:hs.append(f'<img class="secondary" src="{esc(imgsrc(x))}" alt="{esc(stop.get("name"))}">')
-    return '<div class="stop-media">'+''.join(hs)+'</div>'
+    variant=f' variant-{(index % 3)+1}'
+    if len(imgs)==1:
+        return f'<div class="stop-media one{variant}"><img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}"></div>'
+    if len(imgs)==2:
+        return (f'<div class="stop-media two{variant}">'
+                f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}">'
+                f'<img class="secondary" src="{esc(imgsrc(imgs[1]))}" alt="{esc(stop.get("name"))}"></div>')
+    return (f'<div class="stop-media three{variant}">'
+            f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}">'
+            f'<img class="secondary secondary-a" src="{esc(imgsrc(imgs[1]))}" alt="{esc(stop.get("name"))}">'
+            f'<img class="secondary secondary-b" src="{esc(imgsrc(imgs[2]))}" alt="{esc(stop.get("name"))}"></div>')
 def render_stops(stops):
     chunks=[]
     for i,s in enumerate(stops or []):
         tags=''.join(f'<span>{esc(x)}</span>' for x in (s.get('highlights') or []))
         verdict=f'<div class="stop-verdict"><strong>Notre avis</strong>{esc(s.get("verdict"))}</div>' if s.get('verdict') else ''
         reverse=' reverse' if i%2 else ''
-        chunks.append(f'<article class="stop-card{reverse}" id="etape-{i+1}">{stop_media(s)}<div class="stop-copy"><span class="stop-index">Étape {i+1}</span><h3>{esc(s.get("name"))}</h3><span class="stop-days">{esc(s.get("days"))}</span><div class="article-prose">{s.get("body","")}</div>{verdict}<div class="stop-highlights">{tags}</div></div></article>')
+        chunks.append(f'<article class="stop-card{reverse}" id="etape-{i+1}">{stop_media(s,i)}<div class="stop-copy"><span class="stop-index">Étape {i+1}</span><h3>{esc(s.get("name"))}</h3><span class="stop-days">{esc(s.get("days"))}</span><div class="article-prose">{s.get("body","")}</div>{verdict}<div class="stop-highlights">{tags}</div></div></article>')
     return ''.join(chunks)
 def route_section(stops):
     if not stops:return ''
