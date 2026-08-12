@@ -23,3 +23,22 @@ Les contenus sont enregistrés dans `content/guides/`. Le script `build.py` tran
 - Dossier publié : `dist`
 
 Les 3 guides présents (Vietnam, Nouvelle-Zélande, Japon) sont volontairement en brouillon et ne contiennent aucun itinéraire ou budget inventé. Ils servent de modèles à compléter avec l’expérience réelle de Charlotte.
+
+
+## Parcours de contact retenu
+
+Le parcours principal est désormais :
+
+1. CTA du site → Tally : https://tally.so/r/5B5A7d
+2. Le prospect répond aux questions de qualification.
+3. À la fin du formulaire, il est redirigé vers Calendly : https://calendly.com/charlotte-lefevre-83/30min
+4. Un lien Calendly direct reste disponible uniquement comme raccourci pour les personnes ayant déjà rempli le formulaire ou déjà échangé avec Charlotte.
+
+Réseaux :
+- Instagram : https://www.instagram.com/nowornever_world/
+- LinkedIn : https://www.linkedin.com/in/charlottelefevre83/
+- Facebook : https://www.facebook.com/profile.php?id=61593373372029
+
+Avis Google :
+- Lien fourni : https://g.page/r/Ce_hrHncRlT6EBM/review
+- Attention : ce lien sert à déposer un avis. Il ne permet pas à lui seul d'afficher automatiquement les avis sur le site.
