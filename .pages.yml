@@ -14,15 +14,8 @@ content:
 
     view:
       primary: title
-      fields:
-        - title
-        - country
-        - type
-        - draft
-      search:
-        - title
-        - country
-        - type
+      fields: [title, country, type, draft]
+      search: [title, country, type]
 
     fields:
       - name: title
@@ -35,7 +28,7 @@ content:
         type: string
         required: true
         pattern: "^[a-z0-9-]+$"
-        description: Exemple : vietnam, nouvelle-zelande, ha-giang-loop
+        description: "Exemple : vietnam, nouvelle-zelande, ha-giang-loop"
 
       - name: country
         label: Pays
@@ -109,3 +102,6 @@ content:
       - name: body
         label: Contenu de l’article
         type: rich-text
+        options:
+          format: html
+          switcher: true
