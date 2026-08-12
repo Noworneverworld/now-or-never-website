@@ -4,7 +4,7 @@
   "country": "Vietnam",
   "continent": "Asie",
   "type": "Guide pays",
-  "draft": true,
+  "draft": false,
   "featured": true,
   "cover_image": "/assets/vietnam-ninh-binh.jpg",
   "excerpt": "Du Nord au Sud, retour sur 45 jours de voyage entre villes bouillonnantes, paysages karstiques, montagnes, rencontres, expériences improbables et quelques galères.",
