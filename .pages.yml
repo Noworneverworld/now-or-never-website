@@ -1,1 +1,111 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories: [image]
 
+content:
+  - name: guides
+    label: Guides & articles
+    type: collection
+    path: content/guides
+    format: json
+    filename: "{primary}.json"
+
+    view:
+      primary: title
+      fields:
+        - title
+        - country
+        - type
+        - draft
+      search:
+        - title
+        - country
+        - type
+
+    fields:
+      - name: title
+        label: Titre de l’article
+        type: string
+        required: true
+
+      - name: slug
+        label: Adresse de la page
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+        description: Exemple : vietnam, nouvelle-zelande, ha-giang-loop
+
+      - name: country
+        label: Pays
+        type: string
+        required: true
+
+      - name: continent
+        label: Continent / zone
+        type: select
+        options:
+          values:
+            - Europe
+            - Asie
+            - Océanie
+            - Afrique
+            - Amérique latine
+            - Amérique du Nord
+            - Autre
+
+      - name: type
+        label: Type de contenu
+        type: select
+        options:
+          values:
+            - Guide pays
+            - Retour d’expérience
+            - Itinéraire
+            - Budget
+            - Conseil pratique
+            - Randonnée
+            - Road trip
+
+      - name: draft
+        label: Brouillon
+        type: boolean
+
+      - name: featured
+        label: Mettre en avant
+        type: boolean
+
+      - name: cover_image
+        label: Photo principale
+        type: image
+        required: true
+
+      - name: excerpt
+        label: Résumé court
+        type: text
+        required: true
+
+      - name: duration
+        label: Durée du voyage
+        type: string
+
+      - name: budget
+        label: Budget
+        type: string
+
+      - name: travel_period
+        label: Période du voyage
+        type: string
+
+      - name: seo_title
+        label: Titre Google
+        type: string
+
+      - name: seo_description
+        label: Description Google
+        type: text
+
+      - name: body
+        label: Contenu de l’article
+        type: rich-text
