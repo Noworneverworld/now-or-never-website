@@ -1,17 +1,191 @@
 {
-  "title": "45 jours au Vietnam : notre itinéraire, budget et conseils",
+  "title": "45 jours au Vietnam : itinéraire, budget et conseils",
   "slug": "vietnam",
   "country": "Vietnam",
   "continent": "Asie",
   "type": "Guide pays",
   "draft": false,
   "featured": true,
-  "cover_image": "/assets/vietnam-ninh-binh.jpg",
-  "excerpt": "Du Nord au Sud, retour sur 45 jours de voyage entre villes bouillonnantes, paysages karstiques, montagnes, rencontres, expériences improbables et quelques galères.",
+  "cover_image": "/assets/vietnam-ninh-binh-pagoda.jpg",
+  "excerpt": "Du Nord au Sud, 45 jours entre villes bouillonnantes, paysages karstiques, montagnes, rencontres, expériences improbables et quelques galères.",
   "duration": "45 jours",
   "budget": "2 532 € à deux",
   "travel_period": "Mai – juin 2025",
+  "intro_script": "45 jours, 3 680 km, 28 Phở… et un criquet.",
+  "intro_body": "<p>Pendant notre tour du monde, nous avons traversé le Vietnam du Nord au Sud à un rythme plutôt calme. Des klaxons d’Hanoï aux montagnes de Ha Giang, des paysages karstiques de Ninh Binh aux lanternes de Hoi An, le pays nous a montré des visages complètement différents.</p><p>Nous avons aimé ses contrastes, ses rencontres et sa gastronomie. Et il y a aussi eu de la pluie, de longues distances, des scooters épuisants et quelques étapes que nous raccourcirions aujourd’hui.</p>",
+  "stops": [
+    {
+      "name": "Hanoï",
+      "days": "7 jours",
+      "image": "/assets/vietnam-hanoi-street.jpg",
+      "image_2": "/assets/vietnam-hanoi-flowers.jpg",
+      "body": "<p>Vieux quartier, Train Street depuis le Café Chill 69 et beaucoup de temps pour absorber le joyeux chaos de la ville. Sept jours n’étaient pas prévus : nous attendions ma sœur. Pour un premier passage, je conseillerais plutôt quatre à cinq jours.</p>",
+      "verdict": "Un vrai coup de cœur. Nous avons préféré Hanoï à Hô Chi Minh-Ville.",
+      "highlights": [
+        "Vieux quartier",
+        "Train Street",
+        "Cafés vietnamiens"
+      ]
+    },
+    {
+      "name": "Ninh Binh / Tam Coc",
+      "days": "5 jours",
+      "image": "/assets/vietnam-ninh-binh.jpg",
+      "image_2": "/assets/vietnam-ninh-binh-pagoda.jpg",
+      "body": "<p>Une étape parfaite pour ralentir : vélo, barques, temples et montagnes karstiques. Nous avons fait Mua Cave, Trang An, Bai Dinh, la pagode Kỳ Lân, Thai Vi Temple, Bird Valley et l’ancien quartier de Ninh Binh de nuit.</p>",
+      "verdict": "Une étape qu’on ne supprimerait absolument pas.",
+      "highlights": [
+        "Vélo",
+        "Trang An",
+        "Mua Cave",
+        "Temples"
+      ]
+    },
+    {
+      "name": "Cat Ba & baie de Lan Ha",
+      "days": "4 jours",
+      "image": "/assets/vietnam-ninh-binh.jpg",
+      "body": "<p>Cat Ba était largement en travaux lors de notre passage et nous a laissés mitigés. La croisière dans la baie de Lan Ha reste spectaculaire, même si nous avons été surpris par la pollution.</p>",
+      "verdict": "La ville nous a moins convaincus, mais la croisière reste un incontournable.",
+      "highlights": [
+        "Parc national",
+        "Croisière Lan Ha"
+      ]
+    },
+    {
+      "name": "Ha Giang Loop",
+      "days": "5 jours",
+      "image": "/assets/vietnam-ha-giang-road.jpg",
+      "image_2": "/assets/vietnam-ha-giang.jpg",
+      "body": "<p>Une énorme claque. Nous avons choisi les Easy Riders et referions exactement ce choix. Les routes sont difficiles et nous avons vu plusieurs voyageurs accidentés après avoir conduit sans expérience suffisante.</p>",
+      "verdict": "Easy Rider sans hésiter. Un de nos plus grands souvenirs du Vietnam.",
+      "highlights": [
+        "Easy Rider",
+        "Montagnes",
+        "Rencontres",
+        "Villages"
+      ]
+    },
+    {
+      "name": "Hué",
+      "days": "3 jours",
+      "image": "/assets/vietnam-ninh-binh-pagoda.jpg",
+      "body": "<p>Pas un coup de cœur global pour nous, mais la cité impériale reste spectaculaire et mérite la visite.</p>",
+      "verdict": "À garder pour l’histoire et le patrimoine, sans forcément y rester longtemps.",
+      "highlights": [
+        "Cité impériale"
+      ]
+    },
+    {
+      "name": "Da Nang",
+      "days": "5 jours",
+      "image": "/assets/vietnam.jpg",
+      "body": "<p>Une étape surtout dédiée au repos. Notre plus beau souvenir reste la rencontre avec une famille vietnamienne dans notre Airbnb, qui nous a permis de mieux comprendre l’essence du pays.</p>",
+      "verdict": "Pas pour cocher des monuments, mais parfaite pour souffler et vivre une rencontre.",
+      "highlights": [
+        "Repos",
+        "Rencontre locale"
+      ]
+    },
+    {
+      "name": "Hoi An",
+      "days": "5 jours",
+      "image": "/assets/vietnam-hanoi-flowers.jpg",
+      "body": "<p>Magnifique mais très touristique à notre goût. Nous avons aimé Tra Que Culinary Village, les Coconut Basket Boats, les salles d’assemblée, les temples, le marché nocturne et les balades le soir.</p>",
+      "verdict": "Touristique, oui. À supprimer ? Non. Il faut juste sortir un peu de la vieille ville.",
+      "highlights": [
+        "Vieille ville",
+        "Tra Que",
+        "Coconut boats",
+        "Night market"
+      ]
+    },
+    {
+      "name": "Da Lat",
+      "days": "4 jours",
+      "image": "/assets/vietnam-ha-giang.jpg",
+      "body": "<p>La ville la plus random du Vietnam. 😂 Datanla Waterfall, Pongour Waterfall, Linh Phuoc Pagoda, Maze Bar, Clay Tunnel, plantations de café, vers à soie… et une ferme de criquets. Oui, nous en avons mangé.</p>",
+      "verdict": "Improbable, kitsch et mémorable. Nous avons adoré son côté complètement décalé.",
+      "highlights": [
+        "Datanla",
+        "Pongour",
+        "Maze Bar",
+        "Criquets"
+      ]
+    },
+    {
+      "name": "Phan Rang",
+      "days": "1 jour",
+      "image": "/assets/vietnam-ha-giang.jpg",
+      "body": "<p>Nous avons rejoint Phan Rang en Easy Rider depuis Da Lat, avec plusieurs visites en chemin. Ici, le déplacement faisait partie de l’expérience.</p>",
+      "verdict": "Une transition devenue une vraie journée de voyage.",
+      "highlights": [
+        "Easy Rider",
+        "Route panoramique"
+      ]
+    },
+    {
+      "name": "Mui Né",
+      "days": "1 jour",
+      "image": "/assets/vietnam-ha-giang.jpg",
+      "body": "<p>Nous y sommes surtout allés pour les dunes. Sur un voyage plus court, ce serait l’une des premières étapes que nous supprimerions.</p>",
+      "verdict": "Sympa, mais pas indispensable au regard du reste du pays.",
+      "highlights": [
+        "Dunes"
+      ]
+    },
+    {
+      "name": "Hô Chi Minh-Ville",
+      "days": "3 jours",
+      "image": "/assets/vietnam-hanoi-street.jpg",
+      "body": "<p>Une grande ville intéressante pour terminer le voyage, mais nous avons eu davantage de feeling avec Hanoï. Trois jours nous ont semblé suffisants.</p>",
+      "verdict": "À découvrir, mais Hanoï reste notre préférence.",
+      "highlights": [
+        "3 jours suffisent"
+      ]
+    }
+  ],
+  "budget_total": "2 532 €",
+  "budget_per_day": "28,13 €",
+  "budget_note": "Budget réel pour deux personnes sur 45 jours. Pendant les deux premières semaines, certains logements étaient partagés à trois avec ma sœur.",
+  "budget_items": [
+    {
+      "label": "Activités",
+      "amount": "847 €",
+      "percent": 33
+    },
+    {
+      "label": "Alimentation",
+      "amount": "629 €",
+      "percent": 25
+    },
+    {
+      "label": "Logements",
+      "amount": "456 €",
+      "percent": 18
+    },
+    {
+      "label": "Transports",
+      "amount": "379 €",
+      "percent": 15
+    },
+    {
+      "label": "Autres",
+      "amount": "161 €",
+      "percent": 6
+    },
+    {
+      "label": "Sorties",
+      "amount": "60 €",
+      "percent": 2
+    }
+  ],
+  "transport_body": "<p>Nous avons beaucoup utilisé les bus de nuit, ainsi que des vans et des VTC en ville. Le réseau est très pratique pour traverser le pays. Deux fois, nous avons aussi transformé le déplacement lui-même en expérience grâce aux Easy Riders.</p>",
+  "practical_body": "<p>Le Vietnam s’étend sur plus de 1 600 km : la météo peut être complètement différente entre le Nord, le Centre et le Sud. Les règles de visa, les prix, les cartes SIM et les conditions d’entrée évoluent : cette partie doit être vérifiée juste avant publication puis régulièrement mise à jour.</p>",
+  "conclusion_title": "Merci Vietnam.",
+  "conclusion_body": "<p>Il y a eu de la pluie, du plastique sur les plages, des scooters épuisants et quelques expériences moins dorées. Mais justement. C’est aussi ça qui rend le Vietnam réel, vibrant, humain.</p><p>Ce qui nous reste surtout, ce sont les gens : des hôtes, des guides, des familles et des rencontres simples qui ont donné une autre dimension au voyage.</p>",
+  "conclusion_quote": "On est arrivés pour découvrir un pays. On est repartis avec le cœur bien trop plein.",
   "seo_title": "45 jours au Vietnam : itinéraire, budget et conseils | Now or Never",
   "seo_description": "Notre itinéraire réel de 45 jours au Vietnam du Nord au Sud, notre budget détaillé, nos coups de cœur, nos déceptions et nos conseils issus du voyage.",
-  "body": "<p>45 jours, 3 680 km, 28 Phở… et un criquet.</p><p>Pendant notre tour du monde, nous avons traversé le Vietnam du Nord au Sud pendant 45 jours. Des klaxons d’Hanoï aux montagnes de Ha Giang, des paysages karstiques de Ninh Binh aux lanternes de Hoi An, jusqu’à Hô Chi Minh-Ville, le Vietnam nous a montré des visages complètement différents.</p><h2>Notre itinéraire en un coup d’œil</h2><p>Hanoï ➡️ Ninh Binh / Tam Coc ➡️ Cat Ba ➡️ Baie de Lan Ha ➡️ Ha Giang Loop ➡️ Hanoï ➡️ Hué ➡️ Da Nang ➡️ Hoi An ➡️ Da Lat ➡️ Phan Rang ➡️ Mui Né ➡️ Hô Chi Minh-Ville</p><p><strong>À savoir :</strong> c’est notre itinéraire réel, pas un parcours à reproduire exactement.</p><h2>Notre voyage étape par étape</h2><h3>Hanoï · 7 jours</h3><p>Vieux quartier, Train Street depuis le Café Chill 69 et beaucoup de temps pour absorber le joyeux chaos de la ville. Sept jours n’étaient pas prévus : nous attendions ma sœur. Nous conseillerions environ quatre à cinq jours.</p><p><strong>Notre avis</strong>❤️ Notre préférence face à Hô Chi Minh-Ville.</p><h3>Ninh Binh &amp; Tam Coc · 5 jours</h3><p>À vélo : Mua Cave, Trang An, Bai Dinh, pagode Kỳ Lân, Thai Vi Temple, Bird Valley, ancien quartier de Ninh Binh de nuit et Tam Coc en barque.</p><p><strong>Notre avis</strong>❤️ Une étape qu’on ne supprimerait absolument pas.</p><h3>Cat Ba &amp; baie de Lan Ha</h3><p>Cat Ba était largement en travaux lors de notre passage et nous a laissés mitigés. La croisière dans la baie de Lan Ha reste spectaculaire, même si nous avons été surpris par la pollution.</p><h3>Ha Giang Loop · 5 jours</h3><p>Une énorme claque. Nous avons choisi les <strong>Easy Riders</strong> et referions exactement ce choix. Les routes sont difficiles et nous avons vu plusieurs voyageurs accidentés après avoir conduit sans expérience suffisante.</p><p><strong>Notre avis</strong>❤️❤️ Easy Rider sans hésiter.</p><p><a class=\"article-link\" href=\"#\">Article détaillé à venir<br><strong>Notre expérience sur la Ha Giang Loop →</strong></a></p><h3>Hué · 3 jours</h3><p>Pas un coup de cœur pour nous, mais la cité impériale reste spectaculaire.</p><h3>Da Nang · 5 jours</h3><p>Une étape surtout dédiée au repos. Notre plus beau souvenir reste la rencontre avec une famille vietnamienne dans notre Airbnb.</p><h3>Hoi An · 5 jours</h3><p>Magnifique mais très touristique à notre goût. Nous avons aimé Tra Que Culinary Village, les Coconut Basket Boats, les salles d’assemblée, les temples, le marché nocturne et les balades le soir.</p><h3>Da Lat · 4 jours</h3><p>La ville la plus random du Vietnam. 😂 Datanla Waterfall, Pongour Waterfall, Linh Phuoc Pagoda, Maze Bar, Clay Tunnel, plantations de café, vers à soie… et une ferme de criquets. Oui, nous en avons mangé. 🦗</p><p><strong>Notre avis</strong>❤️ Improbable, kitsch et mémorable.</p><h3>Phan Rang, Mui Né &amp; Hô Chi Minh-Ville</h3><p>Nous avons rejoint Phan Rang en Easy Rider avec plusieurs visites en chemin. Mui Né nous a surtout servi à voir les dunes : sur un voyage plus court, nous supprimerions cette étape. Trois jours à Hô Chi Minh-Ville nous ont semblé suffisants.</p><h2>Nos coups de cœur</h2><ul><li><p>Ha Giang Loop</p></li><li><p>Ninh Binh / Tam Coc</p></li><li><p>Da Lat</p></li><li><p>Hanoï</p></li><li><p>Et surtout les rencontres</p></li></ul><h2>Notre budget réel pour 45 jours</h2><table style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\"><p>Catégorie</p></th><th colspan=\"1\" rowspan=\"1\"><p>Pour 2</p></th><th colspan=\"1\" rowspan=\"1\"><p>Part</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Hébergements</p></td><td colspan=\"1\" rowspan=\"1\"><p>456 €</p></td><td colspan=\"1\" rowspan=\"1\"><p>18 %</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Alimentation</p></td><td colspan=\"1\" rowspan=\"1\"><p>629 €</p></td><td colspan=\"1\" rowspan=\"1\"><p>25 %</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Transports</p></td><td colspan=\"1\" rowspan=\"1\"><p>379 €</p></td><td colspan=\"1\" rowspan=\"1\"><p>15 %</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Activités</p></td><td colspan=\"1\" rowspan=\"1\"><p>847 €</p></td><td colspan=\"1\" rowspan=\"1\"><p>33 %</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Boissons &amp; sorties</p></td><td colspan=\"1\" rowspan=\"1\"><p>60 €</p></td><td colspan=\"1\" rowspan=\"1\"><p>2 %</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Autres</p></td><td colspan=\"1\" rowspan=\"1\"><p>161 €</p></td><td colspan=\"1\" rowspan=\"1\"><p>6 %</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p><strong>Total</strong></p></td><td colspan=\"1\" rowspan=\"1\"><p><strong>2 532 €</strong></p></td><td colspan=\"1\" rowspan=\"1\"><p></p></td></tr></tbody></table><blockquote><p>56,26 € par jour à deux, soit 28,13 € par personne et par jour.</p></blockquote><p><strong>Important :</strong> pendant les deux premières semaines, certains logements étaient partagés à trois avec ma sœur.</p><h2>Se déplacer au Vietnam</h2><p>Nous avons beaucoup utilisé les bus de nuit, ainsi que des vans et des VTC en ville. Deux fois, nous avons transformé le déplacement lui-même en expérience grâce aux Easy Riders.</p><h2>Préparer son voyage</h2><p><strong>À actualiser avant publication.</strong> Visa, climat, monnaie, retraits, SIM et applications peuvent évoluer.</p><h2>Ce que le Vietnam nous a laissé</h2><p>Il y a eu de la pluie, du plastique sur les plages, des scooters épuisants et quelques expériences moins dorées. Mais justement. C’est aussi ça qui rend le Vietnam réel, vibrant, humain.</p><blockquote><p>On est arrivés pour découvrir un pays. On est repartis avec le cœur bien trop plein.</p></blockquote><p></p>"
+  "body": ""
 }
