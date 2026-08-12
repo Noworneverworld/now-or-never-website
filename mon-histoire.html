@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mon histoire | Now or Never</title>
+  <meta name="description" content="Découvrez l’histoire derrière Now or Never, née de deux années de voyage autour du monde et d’une envie : créer des voyages qui comptent vraiment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .story-hero{background:var(--cream);padding:150px 0 90px;overflow:hidden}
+    .story-hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:72px;align-items:center}
+    .story-hero h1{font-size:clamp(58px,7vw,100px);line-height:.88;color:var(--navy)}
+    .story-hero h1 span{display:block;font-family:var(--script);font-size:.9em;font-weight:400;color:var(--terra);margin-top:8px}
+    .story-hero p:not(.eyebrow){font-size:17px;max-width:620px;color:#52606b}
+    .hero-mosaic{position:relative;height:620px}
+    .hero-mosaic img{position:absolute;object-fit:cover;box-shadow:0 22px 48px rgba(15,29,45,.13)}
+    .hero-mosaic .m1{left:3%;top:0;width:58%;height:78%;transform:rotate(-2deg)}
+    .hero-mosaic .m2{right:0;bottom:0;width:49%;height:55%;border:10px solid var(--paper);transform:rotate(2deg)}
+    .hero-mosaic .m3{right:2%;top:1%;width:31%;height:30%;border:7px solid var(--paper);transform:rotate(4deg)}
+    .hero-note{position:absolute;left:1%;bottom:4%;background:var(--navy);color:white;padding:16px 20px;transform:rotate(-2deg);z-index:4}
+    .hero-note span{font-family:var(--script);font-size:34px}
+    .origin{background:var(--paper);padding:100px 0}
+    .origin-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px}
+    .origin h2,.chapter h2,.why h2,.today h2{font-size:clamp(45px,5vw,74px)}
+    .origin-copy p{font-size:17px;color:#56626c}
+    .big-quote{margin-top:32px;font-family:var(--serif);font-size:28px;line-height:1.25;color:var(--navy);border-left:3px solid var(--terra);padding-left:25px}
+    .chapter{background:var(--navy);color:white;padding:105px 0}
+    .chapter-head{max-width:850px;margin-bottom:55px}
+    .chapter-head p:last-child{color:#ccd5de;font-size:17px}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .timeline-card{background:var(--paper);color:var(--navy)}
+    .timeline-card img{width:100%;height:300px;object-fit:cover}
+    .timeline-copy{padding:25px}
+    .timeline-copy span{font:700 10px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--terra)}
+    .timeline-copy h3{font-size:31px;margin:7px 0 10px}
+    .timeline-copy p{font-size:12.5px;color:#5d6872}
+    .turning{background:var(--cream);padding:105px 0}
+    .turning-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+    .turning-images{position:relative;height:590px}
+    .turning-images img{position:absolute;object-fit:cover}
+    .turning-images img:first-child{left:0;top:0;width:72%;height:500px}
+    .turning-images img:last-child{right:0;bottom:0;width:48%;height:310px;border:10px solid var(--cream)}
+    .turning-copy h2{font-size:clamp(48px,5vw,76px)}
+    .turning-copy p{font-size:16px;color:#56626c}
+    .turning-copy .script{font-size:49px!important;color:var(--terra)}
+    .why{padding:105px 0;background:var(--paper)}
+    .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+    .why-photo{position:relative}
+    .why-photo img{width:100%;height:650px;object-fit:cover}
+    .why-photo:after{content:"Maintenant ou jamais";position:absolute;right:-20px;bottom:28px;background:var(--navy);color:white;font-family:var(--script);font-size:38px;padding:13px 23px;transform:rotate(-2deg)}
+    .why-copy p{font-size:16px;color:#56626c}
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}
+    .value{background:var(--cream);padding:23px}
+    .value strong{font-family:var(--serif);font-size:25px;color:var(--navy);display:block;margin-bottom:7px}
+    .value p{font-size:12px;margin:0}
+    .today{padding:105px 0;background:var(--cream)}
+    .today-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+    .today-collage{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .today-collage img{width:100%;object-fit:cover}
+    .today-collage img:first-child{height:480px;margin-top:55px}
+    .today-collage img:last-child{height:480px}
+    .today-copy p{font-size:16px;color:#56626c}
+    .today-copy .signature{font-family:var(--script);font-size:54px;color:var(--terra);margin:20px 0 0}
+    .history-cta{padding:95px 0;background:var(--navy);color:white;text-align:center}
+    .history-cta .script{font-size:52px!important;color:var(--terra)}
+    .history-cta h2{font-size:clamp(45px,5vw,72px);max-width:850px;margin:auto}
+    .history-cta p{max-width:650px;margin:18px auto 30px;color:#d8e0e7}
+    .history-cta .btn{background:var(--paper);color:var(--navy);border-color:var(--paper)}
+    @media(max-width:980px){
+      .story-hero-grid,.origin-grid,.turning-grid,.why-grid,.today-grid{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
+      .hero-mosaic{height:540px}.turning-images{height:520px}
+    }
+    @media(max-width:650px){
+      .story-hero{padding:125px 0 65px}.hero-mosaic{height:440px}
+      .hero-mosaic .m1{width:72%;height:72%}.hero-mosaic .m2{width:57%;height:45%}.hero-mosaic .m3{display:none}
+      .timeline{grid-template-columns:1fr}.timeline-card img{height:260px}
+      .turning-images{height:430px}.turning-images img:first-child{width:78%;height:350px}.turning-images img:last-child{width:55%;height:245px}
+      .why-photo img{height:480px}.why-photo:after{right:0;font-size:31px}
+      .values{grid-template-columns:1fr}.today-collage img:first-child,.today-collage img:last-child{height:330px}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header" style="background:var(--navy);position:absolute">
+  <a class="brand" href="index.html"><img src="assets/logo-header.png" alt="Now or Never"></a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <nav class="main-nav">
+    <a href="index.html">Accueil</a>
+    <a href="creons-votre-voyage.html">Créons votre voyage</a>
+    <a href="conseils-destinations.html">Conseils & destinations</a>
+    <a class="active" href="mon-histoire.html">Mon histoire</a>
+  </nav>
+  <a class="header-cta" href="creons-votre-voyage.html#appel">Parler de mon projet</a>
+</header>
+
+<main>
+<section class="story-hero">
+  <div class="shell story-hero-grid">
+    <div>
+      <p class="eyebrow dark">Derrière Now or Never</p>
+      <h1>Avant de créer des voyages,<span>j’ai commencé par vivre le mien.</span></h1>
+      <p>Je m’appelle Charlotte. Et si Now or Never existe aujourd’hui, ce n’est pas parce que j’ai toujours rêvé de créer une entreprise dans le voyage. C’est parce qu’un jour, j’ai décidé de ne plus remettre à plus tard un rêve qui me suivait depuis longtemps.</p>
+    </div>
+    <div class="hero-mosaic">
+      <img class="m1" src="assets/new-zealand-van.jpg" alt="Vie en van en Nouvelle Zélande">
+      <img class="m2" src="assets/peru-machu-picchu.jpg" alt="Voyage au Pérou">
+      <img class="m3" src="assets/laos-balloon.jpg" alt="Montgolfière au Laos">
+      <div class="hero-note"><span>2 ans autour du monde</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="origin">
+  <div class="shell origin-grid">
+    <div>
+      <p class="eyebrow dark">Le point de départ</p>
+      <h2>Et si on arrêtait d’attendre ?</h2>
+      <p class="script">C’est parti de là.</p>
+    </div>
+    <div class="origin-copy">
+      <p>Comme beaucoup, j’avais une vie construite, des projets, des habitudes et cette liste de choses que l’on fera « un jour ». Parmi elles, il y avait un rêve immense : partir longtemps, découvrir le monde et vivre autrement.</p>
+      <p>Alors nous avons décidé de faire de ce « un jour » une date. En novembre 2024, nous sommes partis à deux pour un voyage qui allait durer deux ans.</p>
+      <div class="big-quote">On pensait partir découvrir le monde. Je ne savais pas encore que ce voyage allait aussi complètement redessiner la suite.</div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="shell">
+    <div class="chapter-head">
+      <p class="eyebrow">Le voyage</p>
+      <h2>Deux ans. Des milliers de kilomètres. Et aucune journée vraiment identique.</h2>
+      <p>Le tour du monde n’a pas été une succession de cases cochées sur une carte. Il y a eu des routes, des rencontres, des détours, des paysages qui coupent le souffle, des imprévus et des façons de voyager très différentes.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-card"><img src="assets/tanzania-safari.jpg" alt="Safari en Tanzanie"><div class="timeline-copy"><span>Les premiers départs</span><h3>Quitter le connu</h3><p>La Tanzanie, Zanzibar, puis la sensation très particulière de comprendre que le voyage ne faisait que commencer.</p></div></article>
+      <article class="timeline-card"><img src="assets/new-zealand-milford.jpg" alt="Nouvelle Zélande"><div class="timeline-copy"><span>1 an en Nouvelle Zélande</span><h3>Faire de la route une maison</h3><p>Un van, deux îles et une autre façon de vivre le voyage : plus lente, plus libre, plus proche du quotidien.</p></div></article>
+      <article class="timeline-card"><img src="assets/vietnam-ha-giang.jpg" alt="Vietnam"><div class="timeline-copy"><span>L’Asie</span><h3>Changer de rythme</h3><p>Indonésie, Philippines, Japon, Laos, Vietnam : apprendre à construire chaque voyage différemment selon le pays.</p></div></article>
+      <article class="timeline-card"><img src="assets/bolivia-flamingos.jpg" alt="Bolivie"><div class="timeline-copy"><span>L’Amérique latine</span><h3>Finir en grand</h3><p>Colombie, Pérou, Bolivie, Chili et Argentine : des paysages immenses et les derniers chapitres d’une aventure devenue notre quotidien.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="turning">
+  <div class="shell turning-grid">
+    <div class="turning-images">
+      <img src="assets/japan-couple.jpg" alt="Voyage au Japon">
+      <img src="assets/philippines-drone.jpg" alt="Paysage aux Philippines">
+    </div>
+    <div class="turning-copy">
+      <p class="eyebrow dark">Petit à petit</p>
+      <h2>J’ai compris ce que j’aimais vraiment faire.</h2>
+      <p>Pendant le voyage, les demandes de conseils ont commencé naturellement. Un itinéraire à revoir. Une étape à choisir. Une question sur un pays. Une adresse. Une façon d’éviter de perdre une journée entière dans les transports.</p>
+      <p>Et je pouvais y passer des heures sans les voir passer. Chercher, comparer, comprendre ce qui conviendrait vraiment à la personne en face de moi… J’adorais ça.</p>
+      <p class="script">Le voyage était une passion. Le concevoir en est devenue une autre.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="shell why-grid">
+    <div class="why-photo"><img src="assets/patagonia-torres.jpg" alt="Voyage en Patagonie"></div>
+    <div class="why-copy">
+      <p class="eyebrow dark">Pourquoi Now or Never ?</p>
+      <h2>Parce que certains projets méritent mieux qu’un « plus tard ».</h2>
+      <p>Now or Never est né d’une conviction très simple : la vie est trop courte pour attendre le moment parfait pour vivre quelque chose de fort.</p>
+      <p>Je ne veux pas simplement assembler des hôtels et des activités. Je veux comprendre ce que vous attendez vraiment de ce voyage, puis construire autour de cela un itinéraire cohérent, réaliste et personnel.</p>
+      <div class="values">
+        <div class="value"><strong>Écouter</strong><p>Comprendre votre façon de voyager avant de commencer à chercher.</p></div>
+        <div class="value"><strong>Imaginer</strong><p>Créer un voyage qui ne pourrait pas simplement être copié collé pour quelqu’un d’autre.</p></div>
+        <div class="value"><strong>Anticiper</strong><p>Penser aux détails, aux distances et au rythme pour vous laisser profiter du voyage.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="today">
+  <div class="shell today-grid">
+    <div class="today-copy">
+      <p class="eyebrow dark">Aujourd’hui</p>
+      <h2>À mon tour de vous aider à écrire votre prochain chapitre.</h2>
+      <p>Je suis rentrée avec beaucoup de souvenirs, beaucoup trop de photos et surtout l’envie de donner une suite à tout ce que ces deux années m’ont appris.</p>
+      <p>Aujourd’hui, je mets cette expérience, ma curiosité et mon goût presque obsessionnel pour l’organisation au service de vos projets. Pas pour décider à votre place, mais pour vous aider à créer un voyage qui vous ressemble vraiment.</p>
+      <p>Parce que votre grand voyage n’a pas besoin de ressembler au mien pour devenir l’un des souvenirs les plus forts de votre vie.</p>
+      <p class="signature">Charlotte</p>
+    </div>
+    <div class="today-collage">
+      <img src="assets/vietnam-ninh-binh.jpg" alt="Voyage au Vietnam">
+      <img src="assets/new-zealand-van.jpg" alt="Vie en van">
+    </div>
+  </div>
+</section>
+
+<section class="history-cta">
+  <div class="shell">
+    <p class="script">Et votre histoire ?</p>
+    <h2>Quel voyage attendez-vous depuis trop longtemps ?</h2>
+    <p>Parlez-moi de ce que vous avez en tête. Même si ce n’est encore qu’une destination, une envie ou un rêve un peu flou.</p>
+    <a class="btn" href="creons-votre-voyage.html">Créons votre voyage <span>→</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-grid">
+    <div><img src="assets/logo.png" alt="Now or Never"><p>Des voyages pensés pour vous, jusque dans les détails.</p></div>
+    <div><strong>Explorer</strong><a href="index.html">Accueil</a><a href="creons-votre-voyage.html">Créons votre voyage</a><a href="conseils-destinations.html">Conseils & destinations</a><a href="mon-histoire.html">Mon histoire</a></div>
+    <div><strong>Nous retrouver</strong><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Facebook</a><a href="#">Contact</a></div>
+    <div><strong>Informations</strong><a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Confidentialité</a></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

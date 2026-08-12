@@ -1,0 +1,17 @@
+{
+  "title": "Guide Vietnam",
+  "slug": "vietnam",
+  "country": "Vietnam",
+  "continent": "Asie",
+  "type": "Guide pays",
+  "draft": true,
+  "featured": false,
+  "cover_image": "/assets/vietnam-ninh-binh.jpg",
+  "excerpt": "Mon itinéraire, mon budget, les étapes parcourues et mes conseils issus de mon expérience au Vietnam.",
+  "duration": "",
+  "budget": "",
+  "travel_period": "",
+  "seo_title": "Guide Vietnam : itinéraire, budget et conseils | Now or Never",
+  "seo_description": "Mon guide du Vietnam basé sur mon expérience : itinéraire, budget, étapes et conseils pratiques.",
+  "body": "<h2>Mon itinéraire au Vietnam</h2><p>À compléter avec ton itinéraire réel.</p><h2>Budget</h2><p>À compléter avec tes chiffres réels.</p><h2>Mes conseils</h2><p>À compléter avec ton retour d’expérience.</p>"
+}

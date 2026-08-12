@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{SEO_TITLE}}</title>
+  <meta name="description" content="{{SEO_DESCRIPTION}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .article-hero{padding:150px 0 70px;background:var(--cream)}
+    .article-hero-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:center}
+    .article-hero h1{font-size:clamp(52px,6vw,86px);line-height:.94;color:var(--navy)}
+    .article-hero p{font-size:17px;color:#58636d}.article-hero img{width:100%;height:540px;object-fit:cover}
+    .article-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.article-meta span{border:1px solid #cfc7bd;padding:7px 10px;font:700 9px var(--sans);text-transform:uppercase;letter-spacing:.05em}
+    .article-body{padding:85px 0;background:var(--paper)}.article-body .content{max-width:800px;margin:auto;font-size:17px;line-height:1.8;color:#46535e}
+    .article-body h2{font-size:42px;color:var(--navy);margin:55px 0 15px}.article-body h3{font-size:30px;color:var(--navy);margin:35px 0 10px}.article-body img{max-width:100%;height:auto;margin:28px 0}
+    .article-cta{padding:75px 0;background:var(--navy);text-align:center;color:#fff}.article-cta h2{font-size:50px}.article-cta p{max-width:620px;margin:15px auto 25px;color:#d7dee5}.article-cta .btn{background:var(--paper);color:var(--navy);border-color:var(--paper)}
+    @media(max-width:800px){.article-hero-grid{grid-template-columns:1fr}.article-hero img{height:380px}}
+  </style>
+</head>
+<body>
+<header class="site-header" style="background:var(--navy);position:absolute">
+  <a class="brand" href="../../index.html"><img src="../../assets/logo-header.png" alt="Now or Never"></a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <nav class="main-nav"><a href="../../index.html">Accueil</a><a href="../../creons-votre-voyage.html">Créons votre voyage</a><a href="../../conseils-destinations.html">Conseils & destinations</a><a href="../../mon-histoire.html">Mon histoire</a></nav>
+  <a class="header-cta" href="../../creons-votre-voyage.html#appel">Parler de mon projet</a>
+</header>
+<main>
+<section class="article-hero"><div class="shell article-hero-grid"><div><p class="eyebrow dark">{{TYPE}} · {{COUNTRY}}</p><h1>{{TITLE}}</h1><p>{{EXCERPT}}</p><div class="article-meta">{{META}}</div></div><img src="../..{{COVER_IMAGE}}" alt="{{TITLE}}"></div></section>
+<section class="article-body"><div class="shell"><article class="content">{{BODY}}</article></div></section>
+<section class="article-cta"><div class="shell"><p class="script">Envie d’un voyage qui vous ressemble ?</p><h2>Je peux le concevoir avec vous.</h2><p>Je pars de vos envies, de votre rythme et de votre budget pour construire un voyage sur mesure.</p><a class="btn" href="../../creons-votre-voyage.html">Découvrir mon accompagnement →</a></div></section>
+</main>
+<script src="../../script.js"></script>
+</body></html>
