@@ -55,6 +55,13 @@ def info_cards(d):
 def conclusion_section(d):
     if not any([d.get('conclusion_title'),d.get('conclusion_body'),d.get('conclusion_quote')]):return ''
     return '<section class="conclusion-section"><div class="shell conclusion-grid"><div><p class="section-kicker">Ce que le voyage nous a laissé</p><h2 class="article-section-title">'+esc(d.get('conclusion_title') or 'Notre ressenti')+'</h2></div><div><div class="article-prose">'+d.get('conclusion_body','')+'</div><div class="conclusion-quote">'+esc(d.get('conclusion_quote'))+'</div></div></div></section>'
+
+# V13: pages juridiques statiques
+for legal_name in ['mentions-legales.html','cgv.html','confidentialite.html']:
+    src=ROOT/legal_name
+    if src.exists():
+        shutil.copy2(src,DIST/legal_name)
+
 guides=[]
 testimonials=[]
 for path in sorted((ROOT/'content'/'testimonials').glob('*.json')) if (ROOT/'content'/'testimonials').exists() else []:
