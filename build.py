@@ -56,6 +56,13 @@ def conclusion_section(d):
     if not any([d.get('conclusion_title'),d.get('conclusion_body'),d.get('conclusion_quote')]):return ''
     return '<section class="conclusion-section"><div class="shell conclusion-grid"><div><p class="section-kicker">Ce que le voyage nous a laissé</p><h2 class="article-section-title">'+esc(d.get('conclusion_title') or 'Notre ressenti')+'</h2></div><div><div class="article-prose">'+d.get('conclusion_body','')+'</div><div class="conclusion-quote">'+esc(d.get('conclusion_quote'))+'</div></div></div></section>'
 guides=[]
+testimonials=[]
+for path in sorted((ROOT/'content'/'testimonials').glob('*.json')) if (ROOT/'content'/'testimonials').exists() else []:
+    try:
+        t=json.loads(path.read_text(encoding='utf-8'))
+        testimonials.append(t)
+    except Exception:
+        pass
 for path in sorted((ROOT/'content'/'guides').glob('*.json')):
     d=json.loads(path.read_text(encoding='utf-8'));guides.append(d)
     if d.get('draft',True):continue
@@ -88,6 +95,47 @@ def guide_card(d):
 if start in page and end in page:
     page=re.sub(re.escape(start)+r'.*?'+re.escape(end),start+''.join(guide_card(d) for d in guides)+end,page,flags=re.S)
 (DIST/'conseils-destinations.html').write_text(page,encoding='utf-8')
+
+# Synchronise les guides publiés et les témoignages avec l'accueil.
+home=(DIST/'index.html').read_text(encoding='utf-8')
+
+def home_guide_card(d):
+    href=f'guides/{esc(d.get("slug"))}/' if not d.get('draft',True) else '#'
+    img=(d.get('cover_image') or '/assets/vietnam-ninh-binh.jpg').lstrip('/')
+    label=esc(d.get('country') or d.get('title'))
+    title=esc(d.get('title'))
+    link='Lire le guide →' if not d.get('draft',True) else 'Bientôt disponible'
+    cls='' if not d.get('draft',True) else ' class="soon"'
+    return f'<article class="article-card"><img src="{esc(img)}" alt="{label}"><div><span>{label}</span><h3>{title}</h3><a{cls} href="{href}">{link}</a></div></article>'
+
+published_guides=[d for d in guides if not d.get('draft',True)]
+featured_guides=sorted(published_guides,key=lambda d:(not bool(d.get('featured')), d.get('country','')))[:3]
+hg_start='<!-- AUTO-HOME-GUIDES-START -->';hg_end='<!-- AUTO-HOME-GUIDES-END -->'
+if hg_start in home and hg_end in home:
+    home=re.sub(re.escape(hg_start)+r'.*?'+re.escape(hg_end),
+                hg_start+''.join(home_guide_card(d) for d in featured_guides)+hg_end,
+                home,flags=re.S)
+
+def review_card(t):
+    try: stars=max(1,min(5,int(t.get('stars') or 5)))
+    except: stars=5
+    source='<span class="review-source">Avis Google</span>' if t.get('google') else ''
+    return (f'<article class="review-card"><div class="stars">{"★"*stars}</div>'
+            f'<p>{esc(t.get("text"))}</p><strong>{esc(t.get("name"))}</strong>'
+            f'<span>{esc(t.get("destination"))}</span>{source}</article>')
+
+live_reviews=[t for t in testimonials if not t.get('draft',True) and t.get('text') and t.get('name')]
+live_reviews=sorted(live_reviews,key=lambda t:t.get('order') or 999)[:3]
+reviews_html=''.join(review_card(t) for t in live_reviews)
+rv_start='<!-- AUTO-REVIEWS-START -->';rv_end='<!-- AUTO-REVIEWS-END -->'
+if rv_start in home and rv_end in home:
+    home=re.sub(re.escape(rv_start)+r'.*?'+re.escape(rv_end),rv_start+reviews_html+rv_end,home,flags=re.S)
+    count=len(live_reviews)
+    if count==1: home=home.replace('<div class="review-grid">','<div class="review-grid single-review">',1)
+    elif count==2: home=home.replace('<div class="review-grid">','<div class="review-grid two-reviews">',1)
+
+(DIST/'index.html').write_text(home,encoding='utf-8')
+
 base='https://noworneverworld.com';urls=['/','/creons-votre-voyage.html','/conseils-destinations.html','/mon-histoire.html']+[f'/guides/{d["slug"]}/' for d in guides if not d.get('draft',True)]
 sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{base}{u}</loc></url>\n' for u in urls)+'</urlset>'
 (DIST/'sitemap.xml').write_text(sitemap,encoding='utf-8')
