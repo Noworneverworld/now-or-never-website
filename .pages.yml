@@ -105,8 +105,8 @@ content:
         options:
           format: html
           switcher: true
-          
-       - name: testimonials
+
+  - name: testimonials
     label: Témoignages
     type: collection
     path: content/testimonials
@@ -148,4 +148,3 @@ content:
       - name: order
         label: Ordre d’affichage
         type: number
-
