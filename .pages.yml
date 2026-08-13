@@ -105,3 +105,47 @@ content:
         options:
           format: html
           switcher: true
+          
+       - name: testimonials
+    label: Témoignages
+    type: collection
+    path: content/testimonials
+    format: json
+    filename: "{primary}.json"
+
+    view:
+      primary: name
+      fields: [name, destination, stars, draft]
+      search: [name, destination]
+
+    fields:
+      - name: name
+        label: Prénom / nom affiché
+        type: string
+        required: true
+
+      - name: destination
+        label: Voyage / destination
+        type: string
+
+      - name: text
+        label: Témoignage
+        type: text
+        required: true
+
+      - name: stars
+        label: Nombre d’étoiles
+        type: number
+
+      - name: google
+        label: Avis publié sur Google
+        type: boolean
+
+      - name: draft
+        label: Brouillon
+        type: boolean
+
+      - name: order
+        label: Ordre d’affichage
+        type: number
+
