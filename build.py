@@ -127,11 +127,13 @@ def review_card(t):
     try: stars=max(1,min(5,int(t.get('stars') or 5)))
     except: stars=5
     source='<span class="review-source">Avis Google</span>' if t.get('google') else ''
+    who=f'<strong>{esc(t.get("name"))}</strong>' if t.get('name') else ''
+    tagline=f'<span class="review-tagline">{esc(t.get("tagline"))}</span>' if t.get('tagline') else ''
     return (f'<article class="review-card"><div class="stars">{"★"*stars}</div>'
-            f'<p>{esc(t.get("text"))}</p><strong>{esc(t.get("name"))}</strong>'
-            f'<span>{esc(t.get("destination"))}</span>{source}</article>')
+            f'<p>“{esc(t.get("text"))}”</p>{who}'
+            f'<span>{esc(t.get("destination"))}</span>{tagline}{source}</article>')
 
-live_reviews=[t for t in testimonials if not t.get('draft',True) and t.get('text') and t.get('name')]
+live_reviews=[t for t in testimonials if not t.get('draft',True) and t.get('text')]
 live_reviews=sorted(live_reviews,key=lambda t:t.get('order') or 999)[:3]
 reviews_html=''.join(review_card(t) for t in live_reviews)
 rv_start='<!-- AUTO-REVIEWS-START -->';rv_end='<!-- AUTO-REVIEWS-END -->'
@@ -143,7 +145,7 @@ if rv_start in home and rv_end in home:
 
 (DIST/'index.html').write_text(home,encoding='utf-8')
 
-base='https://noworneverworld.com';urls=['/','/creons-votre-voyage.html','/conseils-destinations.html','/mon-histoire.html']+[f'/guides/{d["slug"]}/' for d in guides if not d.get('draft',True)]
+base='https://noworneverworld.com';urls=['/','/creons-votre-voyage.html','/conseils-destinations.html','/mon-histoire.html','/mentions-legales.html','/cgv.html','/confidentialite.html']+[f'/guides/{d["slug"]}/' for d in guides if not d.get('draft',True)]
 sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{base}{u}</loc></url>\n' for u in urls)+'</urlset>'
 (DIST/'sitemap.xml').write_text(sitemap,encoding='utf-8')
 (DIST/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://noworneverworld.com/sitemap.xml\n',encoding='utf-8')
