@@ -17,15 +17,15 @@ def stop_media(stop, index=0):
     if not imgs:return ''
     variant=f' variant-{(index % 3)+1}'
     if len(imgs)==1:
-        return f'<div class="stop-media one{variant}"><img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}"></div>'
+        return f'<div class="stop-media one{variant}"><img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}" loading="lazy" decoding="async"></div>'
     if len(imgs)==2:
         return (f'<div class="stop-media two{variant}">'
-                f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}">'
-                f'<img class="secondary" src="{esc(imgsrc(imgs[1]))}" alt="{esc(stop.get("name"))}"></div>')
+                f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}" loading="lazy" decoding="async">'
+                f'<img class="secondary" src="{esc(imgsrc(imgs[1]))}" alt="{esc(stop.get("name"))}" loading="lazy" decoding="async"></div>')
     return (f'<div class="stop-media three{variant}">'
-            f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}">'
-            f'<img class="secondary secondary-a" src="{esc(imgsrc(imgs[1]))}" alt="{esc(stop.get("name"))}">'
-            f'<img class="secondary secondary-b" src="{esc(imgsrc(imgs[2]))}" alt="{esc(stop.get("name"))}"></div>')
+            f'<img class="main" src="{esc(imgsrc(imgs[0]))}" alt="{esc(stop.get("name"))}" loading="lazy" decoding="async">'
+            f'<img class="secondary secondary-a" src="{esc(imgsrc(imgs[1]))}" alt="{esc(stop.get("name"))}" loading="lazy" decoding="async">'
+            f'<img class="secondary secondary-b" src="{esc(imgsrc(imgs[2]))}" alt="{esc(stop.get("name"))}" loading="lazy" decoding="async"></div>')
 def render_stops(stops):
     chunks=[]
     for i,s in enumerate(stops or []):
@@ -98,7 +98,7 @@ def guide_card(d):
     label='Découvrir le guide →' if not d.get('draft',True) else 'Bientôt disponible'
     cls='read' if not d.get('draft',True) else 'read disabled'
     img=(d.get('cover_image') or '/assets/vietnam-ninh-binh.jpg').lstrip('/')
-    return f'<article class="country-card"><img src="{esc(img)}" alt="{esc(d.get("country"))}"><div class="country-card-body"><span class="kicker">{esc(d.get("type","Guide pays"))}</span><h3>{esc(d.get("country"))}</h3><p>{esc(d.get("excerpt",""))}</p><div class="contents"><span>Itinéraire</span><span>Budget</span><span>Étapes</span><span>Conseils</span></div><a class="{cls}" href="{href}">{label}</a></div></article>'
+    return f'<article class="country-card"><img src="{esc(img)}" alt="{esc(d.get("country"))}" loading="lazy" decoding="async"><div class="country-card-body"><span class="kicker">{esc(d.get("type","Guide pays"))}</span><h3>{esc(d.get("country"))}</h3><p>{esc(d.get("excerpt",""))}</p><div class="contents"><span>Itinéraire</span><span>Budget</span><span>Étapes</span><span>Conseils</span></div><a class="{cls}" href="{href}">{label}</a></div></article>'
 if start in page and end in page:
     page=re.sub(re.escape(start)+r'.*?'+re.escape(end),start+''.join(guide_card(d) for d in guides)+end,page,flags=re.S)
 (DIST/'conseils-destinations.html').write_text(page,encoding='utf-8')
@@ -113,7 +113,7 @@ def home_guide_card(d):
     title=esc(d.get('title'))
     link='Lire le guide →' if not d.get('draft',True) else 'Bientôt disponible'
     cls='' if not d.get('draft',True) else ' class="soon"'
-    return f'<article class="article-card"><img src="{esc(img)}" alt="{label}"><div><span>{label}</span><h3>{title}</h3><a{cls} href="{href}">{link}</a></div></article>'
+    return f'<article class="article-card"><img src="{esc(img)}" alt="{label}" loading="lazy" decoding="async"><div><span>{label}</span><h3>{title}</h3><a{cls} href="{href}">{link}</a></div></article>'
 
 published_guides=[d for d in guides if not d.get('draft',True)]
 featured_guides=sorted(published_guides,key=lambda d:(not bool(d.get('featured')), d.get('country','')))[:3]

@@ -6,7 +6,7 @@
   "type": "Guide pays",
   "draft": false,
   "featured": true,
-  "cover_image": "/assets/vietnam-ninh-binh-pagoda.jpg",
+  "cover_image": "/assets/vietnam-ninhbinh-aerial.jpeg",
   "excerpt": "Du Nord au Sud, 45 jours entre villes bouillonnantes, paysages karstiques, montagnes, rencontres, expériences improbables et quelques galères.",
   "duration": "45 jours",
   "budget": "2 532 € à deux",
@@ -17,21 +17,19 @@
     {
       "name": "Hanoï",
       "days": "7 jours",
-      "image": "/assets/vietnam-hanoi-street.jpg",
-      "image_2": "/assets/vietnam-hanoi-flowers.jpg",
       "body": "<p>Vieux quartier, Train Street depuis le Café Chill 69 et beaucoup de temps pour absorber le joyeux chaos de la ville. Sept jours n’étaient pas prévus : nous attendions ma sœur. Pour un premier passage, je conseillerais plutôt quatre à cinq jours.</p>",
       "verdict": "Un vrai coup de cœur. Nous avons préféré Hanoï à Hô Chi Minh-Ville.",
       "highlights": [
         "Vieux quartier",
         "Train Street",
         "Cafés vietnamiens"
-      ]
+      ],
+      "image": "/assets/vietnam-hanoi-train.jpeg",
+      "image_2": "/assets/vietnam-hanoi-streetfood.jpeg"
     },
     {
       "name": "Ninh Binh / Tam Coc",
       "days": "5 jours",
-      "image": "/assets/vietnam-ninh-binh.jpg",
-      "image_2": "/assets/vietnam-ninh-binh-pagoda.jpg",
       "body": "<p>Une étape parfaite pour ralentir : vélo, barques, temples et montagnes karstiques. Nous avons fait Mua Cave, Trang An, Bai Dinh, la pagode Kỳ Lân, Thai Vi Temple, Bird Valley et l’ancien quartier de Ninh Binh de nuit.</p>",
       "verdict": "Une étape qu’on ne supprimerait absolument pas.",
       "highlights": [
@@ -39,58 +37,64 @@
         "Trang An",
         "Mua Cave",
         "Temples"
-      ]
+      ],
+      "image": "/assets/vietnam-ninhbinh-river.jpeg",
+      "image_2": "/assets/vietnam-ninhbinh-pagoda.jpeg",
+      "image_3": "/assets/vietnam-ninhbinh-aerial.jpeg"
     },
     {
       "name": "Cat Ba & baie de Lan Ha",
       "days": "4 jours",
-      "image": "/assets/vietnam-ninh-binh.jpg",
       "body": "<p>Cat Ba était largement en travaux lors de notre passage et nous a laissés mitigés. La croisière dans la baie de Lan Ha reste spectaculaire, même si nous avons été surpris par la pollution.</p>",
       "verdict": "La ville nous a moins convaincus, mais la croisière reste un incontournable.",
       "highlights": [
         "Parc national",
         "Croisière Lan Ha"
-      ]
+      ],
+      "image": "/assets/vietnam-lanha-aerial.jpeg",
+      "image_2": "/assets/vietnam-lanha-room.jpeg"
     },
     {
       "name": "Ha Giang Loop",
       "days": "5 jours",
-      "image": "/assets/vietnam-ha-giang-road.jpg",
-      "image_2": "/assets/vietnam-ha-giang.jpg",
-      "body": "<p>Une énorme claque. Nous avons choisi les Easy Riders et referions exactement ce choix. Les routes sont difficiles et nous avons vu plusieurs voyageurs accidentés après avoir conduit sans expérience suffisante.</p>",
+      "body": "<p>Une énorme claque. Nous avons choisi les Easy Riders et referions exactement ce choix. Les routes sont difficiles et nous avons vu plusieurs voyageurs accidentés après avoir conduit sans expérience suffisante. La soirée karaoké avec quatre hommes rencontrés sur place fait aussi partie de ces souvenirs qu’on n’aurait jamais pu planifier.</p>",
       "verdict": "Easy Rider sans hésiter. Un de nos plus grands souvenirs du Vietnam.",
       "highlights": [
         "Easy Rider",
         "Montagnes",
         "Rencontres",
         "Villages"
-      ]
+      ],
+      "image": "/assets/vietnam-hagiang-road.jpeg",
+      "image_2": "/assets/vietnam-hagiang-woman.jpeg",
+      "image_3": "/assets/vietnam-hagiang-karaoke.jpeg"
     },
     {
       "name": "Hué",
       "days": "3 jours",
-      "image": "/assets/vietnam-ninh-binh-pagoda.jpg",
       "body": "<p>Pas un coup de cœur global pour nous, mais la cité impériale reste spectaculaire et mérite la visite.</p>",
       "verdict": "À garder pour l’histoire et le patrimoine, sans forcément y rester longtemps.",
       "highlights": [
         "Cité impériale"
-      ]
+      ],
+      "image": "/assets/vietnam-hue-red.jpeg",
+      "image_2": "/assets/vietnam-hue-gate.jpeg",
+      "image_3": "/assets/vietnam-hue-dress.jpeg"
     },
     {
       "name": "Da Nang",
       "days": "5 jours",
-      "image": "/assets/vietnam.jpg",
-      "body": "<p>Une étape surtout dédiée au repos. Notre plus beau souvenir reste la rencontre avec une famille vietnamienne dans notre Airbnb, qui nous a permis de mieux comprendre l’essence du pays.</p>",
+      "body": "<p>Une étape surtout dédiée au repos. Notre plus beau souvenir reste la rencontre avec une famille vietnamienne à Da Nang, dans notre Airbnb, qui nous a permis de mieux comprendre l’essence du pays.</p>",
       "verdict": "Pas pour cocher des monuments, mais parfaite pour souffler et vivre une rencontre.",
       "highlights": [
         "Repos",
         "Rencontre locale"
-      ]
+      ],
+      "image": "/assets/vietnam-danang-family.jpeg"
     },
     {
       "name": "Hoi An",
       "days": "5 jours",
-      "image": "/assets/vietnam-hanoi-flowers.jpg",
       "body": "<p>Magnifique mais très touristique à notre goût. Nous avons aimé Tra Que Culinary Village, les Coconut Basket Boats, les salles d’assemblée, les temples, le marché nocturne et les balades le soir.</p>",
       "verdict": "Touristique, oui. À supprimer ? Non. Il faut juste sortir un peu de la vieille ville.",
       "highlights": [
@@ -98,12 +102,14 @@
         "Tra Que",
         "Coconut boats",
         "Night market"
-      ]
+      ],
+      "image": "/assets/vietnam-hoian-fisher.jpeg",
+      "image_2": "/assets/vietnam-hoian-palms.jpeg",
+      "image_3": "/assets/vietnam-hoian-beach.jpeg"
     },
     {
       "name": "Da Lat",
       "days": "4 jours",
-      "image": "/assets/vietnam-ha-giang.jpg",
       "body": "<p>La ville la plus random du Vietnam. 😂 Datanla Waterfall, Pongour Waterfall, Linh Phuoc Pagoda, Maze Bar, Clay Tunnel, plantations de café, vers à soie… et une ferme de criquets. Oui, nous en avons mangé.</p>",
       "verdict": "Improbable, kitsch et mémorable. Nous avons adoré son côté complètement décalé.",
       "highlights": [
@@ -111,38 +117,42 @@
         "Pongour",
         "Maze Bar",
         "Criquets"
-      ]
+      ],
+      "image": "/assets/vietnam-dalat-waterfall.jpeg",
+      "image_2": "/assets/vietnam-dalat-buddha.jpeg",
+      "image_3": "/assets/vietnam-dalat-pagoda.jpeg"
     },
     {
       "name": "Phan Rang",
       "days": "1 jour",
-      "image": "/assets/vietnam-ha-giang.jpg",
-      "body": "<p>Nous avons rejoint Phan Rang en Easy Rider depuis Da Lat, avec plusieurs visites en chemin. Ici, le déplacement faisait partie de l’expérience.</p>",
+      "body": "<p>Nous avons rejoint Phan Rang en Easy Rider depuis Da Lat, avec plusieurs visites en chemin, dont une plantation de thé. Ici, le déplacement faisait partie de l’expérience.</p>",
       "verdict": "Une transition devenue une vraie journée de voyage.",
       "highlights": [
         "Easy Rider",
         "Route panoramique"
-      ]
+      ],
+      "image": "/assets/vietnam-easyride-tea.jpeg"
     },
     {
       "name": "Mui Né",
       "days": "1 jour",
-      "image": "/assets/vietnam-ha-giang.jpg",
       "body": "<p>Nous y sommes surtout allés pour les dunes. Sur un voyage plus court, ce serait l’une des premières étapes que nous supprimerions.</p>",
       "verdict": "Sympa, mais pas indispensable au regard du reste du pays.",
       "highlights": [
         "Dunes"
-      ]
+      ],
+      "image": "/assets/vietnam-muine-fishing.jpeg"
     },
     {
       "name": "Hô Chi Minh-Ville",
       "days": "3 jours",
-      "image": "/assets/vietnam-hanoi-street.jpg",
       "body": "<p>Une grande ville intéressante pour terminer le voyage, mais nous avons eu davantage de feeling avec Hanoï. Trois jours nous ont semblé suffisants.</p>",
       "verdict": "À découvrir, mais Hanoï reste notre préférence.",
       "highlights": [
         "3 jours suffisent"
-      ]
+      ],
+      "image": "/assets/vietnam-hcmc-church.jpeg",
+      "image_2": "/assets/vietnam-hcmc-night.jpeg"
     }
   ],
   "budget_total": "2 532 €",
